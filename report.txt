@@ -1,50 +1,60 @@
+summary:
+This is our basic report:
+summary:
+This is our basic report:
+summary:
+This is our basic report:
+summary:
+This is our basic report:
+summary:
+This is our basic report:
 
 Huvudkontor
-  SW-CORE-01
-  SW-CORE-02
-  SW-DIST-01
-  SW-DIST-02
-  SW-ACCESS-03
-  SW-ACCESS-04
-  SW-ACCESS-05
-  RT-EDGE-01
-  RT-EDGE-02
-  AP-FLOOR1-01
-  AP-FLOOR1-02
-  AP-FLOOR2-01
-  AP-FLOOR2-02
-  AP-FLOOR3-01
-  FW-DMZ-01
+  SW-CORE-01      Cisco            145
+  SW-CORE-02      Cisco            145
+  SW-DIST-01      Cisco             89
+  SW-DIST-02      Cisco             89
+  SW-ACCESS-03    HP                 0
+  SW-ACCESS-04    HP               234
+  SW-ACCESS-05    HP                15
+  RT-EDGE-01      Fortinet         234
+  RT-EDGE-02      Fortinet         234
+  AP-FLOOR1-01    Ubiquiti          67
+  AP-FLOOR1-02    Ubiquiti          67
+  AP-FLOOR2-01    Ubiquiti          12
+  AP-FLOOR2-02    Ubiquiti           2
+  AP-FLOOR3-01    Cisco            156
+  FW-DMZ-01       Palo Alto         89
 
 Lager
-  SW-LAGER-01
-  SW-LAGER-02
-  RT-LAGER-01
-  AP-LAGER-01
-  AP-LAGER-02
+  SW-LAGER-01     Cisco            456
+  SW-LAGER-02     Cisco             23
+  RT-LAGER-01     Cisco              2
+  AP-LAGER-01     Ubiquiti          67
+  AP-LAGER-02     Ubiquiti           0
 
 Kontor Malmö
-  SW-MAL-CORE-01
-  SW-MAL-ACC-01
-  SW-MAL-ACC-02
-  RT-MAL-01
-  AP-MAL-01
-  AP-MAL-02
-  FW-MAL-01
+  SW-MAL-CORE-01  Juniper          367
+  SW-MAL-ACC-01   Juniper           45
+  SW-MAL-ACC-02   Juniper            8
+  RT-MAL-01       Mikrotik         178
+  AP-MAL-01       Aruba             90
+  AP-MAL-02       Aruba             90
+  FW-MAL-01       Fortinet         234
 
 Datacenter
-  SW-DC-CORE-01
-  SW-DC-CORE-02
-  SW-DC-TOR-01
-  SW-DC-TOR-02
-  SW-DC-TOR-03
-  RT-DC-EDGE-01
-  FW-DC-01
-  FW-DC-02
-  LB-DC-01
-  LB-DC-02
+  SW-DC-CORE-01   Cisco            789
+  SW-DC-CORE-02   Cisco            789
+  SW-DC-TOR-01    Arista           234
+  SW-DC-TOR-02    Arista             5
+  SW-DC-TOR-03    Arista           156
+  RT-DC-EDGE-01   Juniper          567
+  FW-DC-01        Checkpoint       445
+  FW-DC-02        Checkpoint       445
+  LB-DC-01        F5               234
+  LB-DC-02        F5               234
 
 Säkerhetskopia
-  SW-DR-01
-  RT-DR-01
-  FW-DR-01
+  SW-DR-01        Dell             890
+  RT-DR-01        Cisco            890
+  FW-DR-01        Sophos           345
