@@ -84,4 +84,3 @@ def generate_report(json_path: Path, out_path: Path):
     counts_type = Counter(d.get("type", "okänd") for d in devices)
 
     low_uptime =[d for d in devices if d.get("uptime_days", 0) < LOW_UPTIME_DAYS]
-
