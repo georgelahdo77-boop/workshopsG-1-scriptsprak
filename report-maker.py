@@ -84,3 +84,35 @@ def generate_report(json_path: Path, out_path: Path):
     counts_type = Counter(d.get("type", "okänd") for d in devices)
 
     low_uptime =[d for d in devices if d.get("uptime_days", 0) < LOW_UPTIME_DAYS]
+
+    switches = [d for d in devices if d.get("type") == "switch" and isinstance(d.get("ports"), dict)]
+    used_total = sum(d["ports"].get("used", 0) for d in switches)
+    total_ports = sum(d["ports"].get("total", 0) for d in switches)
+    port_util_pct = percent(used_total, total_ports)
+
+
+    unique_vlans = sorted({v for d in devices for v in d.get("vlans", [])})
+
+    by_loc = defaultdict(list)
+    for d in devices:
+        by_loc[d.get("site", "okänd")].append(d)
+    loc_rows = []
+    for site, items in sorted(by_loc.items()):
+        online = sum(1 for d in items if d.get("status") == "online")
+        warning = sum(1 for d in items if d.get("status") == "warning")
+        offline = sum(1 for d in items if d.get("status") == "offline")
+        loc_rows.append([site, len(items), online, warning, offline])
+
+
+        high_util = []
+        for d in switches:
+            u, t = d["ports"].get("used" 0), d["ports"].get("total", 0)
+            p = percent(u, t)
+            if p >= HIGH_UTIL_THRESHOLD:
+                high_util.append((d, p))
+
+
+
+
+        
+
